@@ -2640,3 +2640,55 @@ body.is-loaded #page-loader {
   min-width: 118px !important;
   height: 58px !important;
 }
+/* =========================
+   FIX FINALE SEZIONE LAVORI
+   Testi più piccoli + bordo immagine più stretto
+========================= */
+
+/* Titolo principale */
+.works h2 {
+  font-size: 54px !important;
+  line-height: 1.05 !important;
+  margin-bottom: 30px !important;
+}
+
+/* Sottotitolo verde */
+.works h3 {
+  font-size: 32px !important;
+  line-height: 1.1 !important;
+  margin-bottom: 54px !important;
+  border-bottom: 4px solid #CDE4C5 !important;
+  padding-bottom: 5px !important;
+}
+
+/* Paragrafo */
+.works p {
+  font-size: 21px !important;
+  line-height: 1.48 !important;
+  width: 560px !important;
+  margin-bottom: 58px !important;
+}
+
+/* Bottone leggermente più elegante */
+.works-button {
+  width: 355px !important;
+  height: 56px !important;
+  border: 3px solid #CDE4C5 !important;
+  font-size: 15px !important;
+  border-radius: 7px !important;
+}
+
+/* Cornice verde immagine più stretta */
+.works-slider {
+  padding: 10px !important;
+}
+
+/* L'immagine deve partire più vicino al bordo */
+.works-slide {
+  inset: 10px !important;
+}
+
+/* Pallini leggermente più vicini al bordo nuovo */
+.works-dots {
+  bottom: 28px !important;
+}
