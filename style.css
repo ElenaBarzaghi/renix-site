@@ -12,7 +12,7 @@
   --white: #FFFFFF;
   --text-dark: #4C5B5C;
   --muted-white: rgba(255, 255, 255, 0.92);
-  --header-height: 164px;
+  --header-height: 124px;
   --container: 1540px;
   --side: 96px;
 }
@@ -2493,4 +2493,150 @@ body.is-loaded #page-loader {
 .footer-social {
   justify-self: start !important;
   transform: translate(130px, -10px) !important;
+}
+
+/* =========================
+   HEADER PICCOLO DEFINITIVO
+========================= */
+
+.site-header {
+  height: 132px !important;
+  background: #FFFFFF !important;
+}
+
+.header-inner {
+  height: 132px !important;
+  padding: 0 70px 0 42px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+/* Logo più piccolo come Figma */
+.brand {
+  width: 355px !important;
+  height: 112px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.brand-logo {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: left center !important;
+}
+
+/* Menu più piccolo */
+.main-nav {
+  height: 72px !important;
+  gap: 42px !important;
+
+  display: flex !important;
+  align-items: center !important;
+}
+
+.main-nav a {
+  height: 72px !important;
+  min-width: 96px !important;
+  padding: 0 18px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  font-family: "Montserrat", Arial, sans-serif !important;
+  font-size: 24px !important;
+  font-weight: 500 !important;
+  line-height: 1 !important;
+
+  color: #4C5B5C !important;
+  background: transparent !important;
+  border-radius: 8px !important;
+  text-decoration: none !important;
+}
+
+/* Rettangolo Home */
+.main-nav a.is-active {
+  width: 142px !important;
+  min-width: 142px !important;
+  height: 72px !important;
+
+  background: #91C3A2 !important;
+  color: #FFFFFF !important;
+}
+
+/* Evita che lo scroll lo renda diverso */
+.site-header.header-compact {
+  height: 132px !important;
+}
+
+.site-header.header-compact .header-inner {
+  height: 132px !important;
+  padding: 0 70px 0 42px !important;
+}
+
+.site-header.header-compact .brand {
+  width: 355px !important;
+  height: 112px !important;
+}
+
+.site-header.header-compact .main-nav {
+  height: 72px !important;
+  gap: 42px !important;
+}
+
+.site-header.header-compact .main-nav a {
+  height: 72px !important;
+  min-width: 96px !important;
+  font-size: 24px !important;
+}
+
+.site-header.header-compact .main-nav a.is-active {
+  width: 142px !important;
+  min-width: 142px !important;
+}
+/* MENU HEADER PIÙ PICCOLO */
+
+.main-nav {
+  height: 58px !important;
+  gap: 34px !important;
+}
+
+.main-nav a {
+  height: 58px !important;
+  min-width: auto !important;
+  padding: 0 14px !important;
+
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  border-radius: 7px !important;
+}
+
+/* Rettangolo Home più piccolo */
+.main-nav a.is-active {
+  width: 118px !important;
+  min-width: 118px !important;
+  height: 58px !important;
+}
+
+/* Mantiene uguale anche quando l'header diventa compact */
+.site-header.header-compact .main-nav {
+  height: 58px !important;
+  gap: 34px !important;
+}
+
+.site-header.header-compact .main-nav a {
+  height: 58px !important;
+  min-width: auto !important;
+  padding: 0 14px !important;
+  font-size: 20px !important;
+  border-radius: 7px !important;
+}
+
+.site-header.header-compact .main-nav a.is-active {
+  width: 118px !important;
+  min-width: 118px !important;
+  height: 58px !important;
 }
