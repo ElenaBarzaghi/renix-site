@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servizi Renix</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/servizi.css">
+</head>
+
+<body>
+  <div id="page-loader" aria-label="Caricamento pagina">
+    <div class="loader-renix-house">
+      <div class="loader-house-roof">
+        <div class="loader-panel panel-1"></div>
+        <div class="loader-panel panel-2"></div>
+        <div class="loader-panel panel-3"></div>
+      </div>
+
+      <div class="loader-house-base">
+        <span class="loader-window window-1"></span>
+        <span class="loader-window window-2"></span>
+        <span class="loader-window window-3"></span>
+        <span class="loader-window window-4"></span>
+        <span class="loader-door"></span>
+      </div>
+
+      <div class="loader-energy-ring"></div>
+    </div>
+  </div>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="./index.html" aria-label="Torna alla homepage">
+            <img src="./assets/logo-renix.svg" alt="Renix" class="brand-logo">
+            </a>
+
+            <nav class="main-nav">
+            <a href="./index.html" class="is-active">Home</a>
+            <a href="./servizi.html">Servizi</a>
+            <a href="./work-in-progress.html">News</a>
+            <a href="./work-in-progress.html">Contatti</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="renix-build-home" id="renixBuildHome">
+        <div class="renix-build-pin">
+            <div class="renix-build-copy">
+            <p class="renix-build-kicker">Servizi Renix</p>
+
+            <h1>La casa prende forma, impianto dopo impianto.</h1>
+
+            <p id="renixBuildLabel">
+                Scorri per vedere come Renix integra elettrico, idraulico, fotovoltaico, pompe di calore e gestione energia.
+            </p>
+
+            <div class="renix-build-tags">
+                <span class="active" data-renix-chip="0">Casa</span>
+                <span data-renix-chip="1">Fotovoltaico</span>
+                <span data-renix-chip="2">Elettrico</span>
+                <span data-renix-chip="3">Idraulico</span>
+                <span data-renix-chip="4">Pompa di calore</span>
+                <span data-renix-chip="5">Energia</span>
+            </div>
+            </div>
+
+            <div class="renix-build-visual">
+            <div class="renix-house-stage">
+                <svg class="renix-house-svg" viewBox="0 0 1000 650" aria-hidden="true">
+
+                <!-- CASA -->
+                <g class="build-step step-house" data-start="0" data-end="0.18" data-chip="0"
+                    data-label="Prima prende forma la struttura: una casa ordinata, pronta per ospitare tutti gli impianti.">
+                    <path class="draw" d="M190 535H800" />
+                    <path class="draw" d="M270 535V285L500 115L730 285V535H270Z" />
+                    <path class="draw" d="M225 305L500 95L775 305" />
+                    <path class="draw" d="M730 305H845V535H730" />
+                    <path class="draw" d="M730 305L790 245L900 295V535H845" />
+                    <path class="draw" d="M410 535V405H530V535" />
+                    <path class="draw" d="M315 345H385V415H315Z" />
+                    <path class="draw" d="M585 345H655V415H585Z" />
+                    <path class="draw" d="M780 370H835V425H780Z" />
+                </g>
+
+                <!-- FOTOVOLTAICO -->
+                <g class="build-step step-solar" data-start="0.15" data-end="0.34" data-chip="1"
+                    data-label="Sul tetto vengono installati i pannelli fotovoltaici per produrre energia in modo efficiente.">
+                    <polygon class="fade panel-fill" points="410,205 500,137 615,230 525,298" />
+                    <path class="draw" d="M410 205L500 137L615 230L525 298Z" />
+                    <path class="draw" d="M455 171L570 264" />
+                    <path class="draw" d="M432 205L548 298" />
+                    <path class="draw" d="M455 240L545 171" />
+                    <path class="draw" d="M495 273L585 205" />
+                </g>
+
+                <!-- IMPIANTO ELETTRICO -->
+                <g class="build-step step-electric" data-start="0.31" data-end="0.52" data-chip="2"
+                    data-label="Poi prende forma l’impianto elettrico: quadro, punti luce, prese e collegamenti tecnici.">
+                    <rect class="draw" x="315" y="455" width="58" height="70" rx="8" />
+                    <path class="draw" d="M330 478H358" />
+                    <path class="draw" d="M330 500H358" />
+                    <path class="draw" d="M373 490H500V365H640" />
+                    <path class="draw" d="M500 365V300H390" />
+                    <path class="draw" d="M390 280V320" />
+                    <path class="draw" d="M370 300H410" />
+                    <circle class="draw" cx="640" cy="365" r="27" />
+                    <path class="draw" d="M640 338V315" />
+                    <path class="draw" d="M640 392V415" />
+                    <path class="draw" d="M613 365H590" />
+                    <path class="draw" d="M667 365H690" />
+                </g>
+
+                <!-- IMPIANTO IDRAULICO -->
+                <g class="build-step step-water" data-start="0.49" data-end="0.68" data-chip="3"
+                    data-label="L’impianto idraulico collega gli ambienti principali con percorsi puliti e funzionali.">
+                    <path class="draw" d="M615 505V455H545V405H470" />
+                    <path class="draw" d="M545 405V350H365" />
+                    <path class="draw" d="M365 350C340 350 330 330 345 312" />
+                    <path class="draw" d="M345 312C360 295 385 300 405 300" />
+                    <path class="draw" d="M615 455V390H690" />
+                    <path class="draw" d="M690 390C720 390 735 410 735 435" />
+                    <path class="draw" d="M735 435V485" />
+                    <path class="draw" d="M715 485H755" />
+                </g>
+
+                <!-- POMPA DI CALORE -->
+                <g class="build-step step-heat" data-start="0.65" data-end="0.83" data-chip="4"
+                    data-label="La pompa di calore entra nel sistema per migliorare comfort, climatizzazione ed efficienza.">
+                    <rect class="fade heat-fill" x="815" y="405" width="115" height="95" rx="14" />
+                    <rect class="draw" x="815" y="405" width="115" height="95" rx="14" />
+                    <circle class="draw" cx="872" cy="452" r="28" />
+                    <path class="draw" d="M872 424V480" />
+                    <path class="draw" d="M844 452H900" />
+                    <path class="draw" d="M730 450H815" />
+                    <path class="draw" d="M730 420H790V300H655" />
+                    <rect class="draw" x="570" y="285" width="85" height="38" rx="8" />
+                    <path class="draw" d="M590 304H635" />
+                </g>
+
+                <!-- INVERTER / ACCUMULO / GESTIONE -->
+                <g class="build-step step-energy" data-start="0.80" data-end="1" data-chip="5"
+                    data-label="Infine inverter, accumulo e gestione energia collegano tutto in un unico sistema.">
+                    <rect class="draw" x="770" y="165" width="82" height="120" rx="10" />
+                    <path class="draw" d="M790 195H832" />
+                    <path class="draw" d="M790 225H820" />
+                    <path class="draw" d="M790 255H810" />
+                    <path class="draw" d="M770 225H615" />
+                    <path class="draw" d="M810 285V405" />
+                    <path class="draw" d="M500 137L770 205" />
+                    <circle class="fade glow-dot" cx="500" cy="137" r="12" />
+                    <circle class="fade glow-dot" cx="640" cy="365" r="12" />
+                    <circle class="fade glow-dot" cx="872" cy="452" r="12" />
+                </g>
+
+                </svg>
+            </div>
+            </div>
+        </div>
+        </section>
+
+    </main>
+    <script src="js/servizi.js"></script>
+</body>
