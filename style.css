@@ -2692,3 +2692,57 @@ body.is-loaded #page-loader {
 .works-dots {
   bottom: 28px !important;
 }
+
+/* =========================
+   FOOTER: ALLINEAMENTO RIGHE CON TELEFONO
+========================= */
+
+.footer-address,
+.footer-links,
+.footer-social {
+  display: grid !important;
+  grid-template-rows: 72px 54px 54px 54px !important;
+  row-gap: 16px !important;
+  align-items: center !important;
+}
+
+/* Reset margini interni */
+.footer-address p,
+.footer-links h2,
+.footer-social h2,
+.footer-links a,
+.footer-social a {
+  margin: 0 !important;
+}
+
+/* Testi leggermente più piccoli e ordinati */
+.footer-address,
+.footer-links a,
+.footer-social a {
+  font-size: 19px !important;
+  line-height: 1.25 !important;
+}
+
+/* Titoli colonne */
+.footer-links h2,
+.footer-social h2 {
+  font-size: 21px !important;
+  line-height: 1.15 !important;
+}
+
+/* Mantiene la posizione che avevi già scelto */
+.footer-brand {
+  justify-self: start !important;
+  transform: translate(-20px, -20px) !important;
+}
+
+.footer-address {
+  justify-self: start !important;
+  transform: translateX(190px) !important;
+}
+
+.footer-links,
+.footer-social {
+  justify-self: start !important;
+  transform: translate(130px, 0px) !important;
+}
