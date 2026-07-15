@@ -1,0 +1,310 @@
+/* ================================
+   RENIX - Pagina Contatti
+================================ */
+
+.renix-contact-page {
+  background: #667370;
+  color: #ffffff;
+}
+
+.renix-contact-hero {
+  position: relative;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.renix-contact-hero__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.renix-contact-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(20, 32, 31, 0.78) 0%,
+    rgba(20, 32, 31, 0.48) 42%,
+    rgba(20, 32, 31, 0.12) 100%
+  );
+}
+
+.renix-contact-hero__content {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 1120px);
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+.renix-contact-hero__content h1 {
+  margin: 0 0 18px;
+  font-size: clamp(38px, 5vw, 64px);
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.renix-contact-hero__content p {
+  margin: 0;
+  max-width: 560px;
+  font-size: clamp(17px, 2vw, 22px);
+  line-height: 1.25;
+  font-weight: 500;
+}
+
+.renix-contact-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.85fr);
+  width: 100%;
+  background: #667370;
+}
+
+.renix-contact-left {
+  padding: 54px clamp(24px, 6vw, 78px) 74px;
+}
+
+.renix-contact-right {
+  padding: 54px clamp(24px, 5vw, 72px) 74px;
+  background: #2d3e3e;
+}
+
+.renix-contact-block + .renix-contact-block {
+  margin-top: 74px;
+}
+
+.renix-contact-heading {
+  margin: 0 0 30px;
+  color: #d4ecd2;
+}
+
+.renix-contact-heading h2 {
+  margin: 0;
+  font-size: clamp(25px, 2.6vw, 35px);
+  line-height: 1.08;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+
+.renix-contact-heading span {
+  display: block;
+  width: min(290px, 75vw);
+  height: 3px;
+  margin-top: 9px;
+  background: currentColor;
+}
+
+.renix-contact-form {
+  max-width: 560px;
+}
+
+.renix-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.renix-contact-form label {
+  display: block;
+}
+
+.renix-contact-form label > span:not(.renix-privacy span) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.renix-contact-form input,
+.renix-contact-form textarea {
+  width: 100%;
+  border: 0;
+  border-radius: 8px;
+  background: #f7f7f4;
+  color: #243130;
+  font: inherit;
+  font-size: 15px;
+  padding: 15px 17px;
+  outline: none;
+  box-shadow: none;
+}
+
+.renix-contact-form input::placeholder,
+.renix-contact-form textarea::placeholder {
+  color: #4f5d5e;
+}
+
+.renix-contact-form input:focus,
+.renix-contact-form textarea:focus {
+  box-shadow: 0 0 0 3px rgba(132, 190, 154, 0.38);
+}
+
+.renix-contact-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.renix-contact-form > label,
+.renix-contact-form .renix-form-row {
+  margin-bottom: 14px;
+}
+
+.renix-privacy {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+  margin: 4px 0 20px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 12px;
+}
+
+.renix-privacy input {
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  accent-color: #8ac39f;
+}
+
+.renix-contact-form button {
+  border: 0;
+  border-radius: 8px;
+  background: #8ac39f;
+  color: #ffffff;
+  padding: 15px 23px;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.renix-contact-form button:hover {
+  background: #78b38d;
+  transform: translateY(-2px);
+}
+
+.renix-contact-form button span {
+  margin-left: 14px;
+}
+
+.renix-map-card {
+  width: min(100%, 560px);
+  height: 260px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f7f7f4;
+}
+
+.renix-map-card iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.renix-info-list {
+  display: grid;
+  gap: 34px;
+}
+
+.renix-info-item {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 14px;
+  color: #ffffff;
+}
+
+.renix-info-icon {
+  width: 28px;
+  height: 28px;
+  color: #8ac39f;
+}
+
+.renix-info-icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.renix-info-item h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #d4ecd2;
+  font-weight: 800;
+}
+
+.renix-info-item p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.renix-info-item a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.renix-info-item a:hover {
+  color: #d4ecd2;
+}
+
+.renix-opening-hours {
+  margin-top: 80px;
+}
+
+.renix-hours-weekend {
+  margin-top: 28px !important;
+}
+
+/* Tablet */
+@media (max-width: 980px) {
+  .renix-contact-content {
+    grid-template-columns: 1fr;
+  }
+
+  .renix-contact-right {
+    padding-top: 58px;
+  }
+
+  .renix-contact-form,
+  .renix-map-card {
+    max-width: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .renix-contact-hero {
+    min-height: 330px;
+  }
+
+  .renix-contact-hero__content {
+    padding: 70px 20px;
+  }
+
+  .renix-contact-left,
+  .renix-contact-right {
+    padding: 44px 20px 58px;
+  }
+
+  .renix-form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .renix-contact-block + .renix-contact-block {
+    margin-top: 58px;
+  }
+
+  .renix-opening-hours {
+    margin-top: 60px;
+  }
+}

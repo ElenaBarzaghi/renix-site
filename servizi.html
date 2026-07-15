@@ -11,20 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./style.css" />
-
-  <style>
-    /* Sezione video-scroll impianti (iframe isolato) */
-    .impianti-scroll {
-      width: 100%;
-      background: #07080a;
-    }
-    .impianti-scroll iframe {
-      display: block;
-      width: 100%;
-      height: 100vh;
-      border: 0;
-    }
-  </style>
+  <link rel="stylesheet" href="./servizi.css" />
 </head>
 
 <body>
@@ -44,11 +31,148 @@
   </header>
 
   <main>
-    <!-- Video-scroll: la casa Renix, impianto per impianto (asset autonomo) -->
-    <section class="impianti-scroll" aria-label="La casa Renix, impianto per impianto">
-      <iframe src="./assets/renix-scroll-impianti.standalone.html"
-              title="Impianti integrati Renix — video interattivo"
-              loading="lazy"></iframe>
+    <!-- Video scroll-driven: la casa Renix, impianto per impianto.
+         Il playback avanza SOLO con lo scroll. Nessun testo/overlay. -->
+    <section id="renixVideo" class="renixvid" aria-label="La casa Renix, animazione degli impianti">
+      <div class="renixvid__pin">
+        <video id="renixVideoEl" class="renixvid__video"
+               muted playsinline preload="auto"
+               disablepictureinpicture disableremoteplayback
+               tabindex="-1" aria-hidden="true">
+          <source src="./assets/renix/video/renix-scroll.mp4" type="video/mp4">
+        </video>
+        <div class="renixvid__loader" aria-hidden="true"><span></span></div>
+      </div>
+    </section>
+
+    <!-- RENIX - Sezioni dopo video scroll -->
+    <section class="renix-services-section" id="renix-services-list">
+      <div class="renix-services-container">
+        <header class="renix-section-heading renix-section-heading--center">
+          <h2>I nostri servizi</h2>
+          <span></span>
+        </header>
+
+        <div class="renix-services-grid">
+          <article class="renix-service-card">
+            <div class="renix-service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M12 2.5v3M12 18.5v3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M2.5 12h3M18.5 12h3M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Fotovoltaico</h3>
+            <p>Impianti fotovoltaici su misura per produrre energia pulita e ridurre i costi.</p>
+            <span class="renix-card-arrow" aria-hidden="true">→</span>
+          </article>
+
+          <article class="renix-service-card">
+            <div class="renix-service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M13.2 3.2C9.7 6.4 7 9.7 7 13.1A5 5 0 0 0 12 18a5 5 0 0 0 5-4.9c0-2.5-1.5-4.6-3.1-6.4-.2 2-1.1 3.4-2.4 4.5.2-2.9-.6-5.2-1.7-7.1Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                <path d="M9.5 19.5h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Pompe di calore</h3>
+            <p>Soluzioni efficienti per riscaldamento, raffrescamento e acqua calda sanitaria.</p>
+            <span class="renix-card-arrow" aria-hidden="true">→</span>
+          </article>
+
+          <article class="renix-service-card">
+            <div class="renix-service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M13.5 2.8 5.8 13.1h5.4l-1 8.1 8-11.2h-5.6l.9-7.2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Impianti elettrici</h3>
+            <p>Soluzioni sicure e integrate per ogni esigenza abitativa e professionale.</p>
+            <span class="renix-card-arrow" aria-hidden="true">→</span>
+          </article>
+
+          <article class="renix-service-card renix-service-card--row2">
+            <div class="renix-service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 3.2C9.1 6.4 6.4 9.8 6.4 13.4A5.6 5.6 0 0 0 12 19a5.6 5.6 0 0 0 5.6-5.6c0-3.6-2.7-7-5.6-10.2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                <path d="M9.4 14.2A2.8 2.8 0 0 0 12 16.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Impianti idraulici</h3>
+            <p>Impianti completi per abitazioni e aziende, realizzati con materiali di qualità.</p>
+            <span class="renix-card-arrow" aria-hidden="true">→</span>
+          </article>
+
+          <article class="renix-service-card renix-service-card--row2">
+            <div class="renix-service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M9.8 3.5h4.4l.6 2.6c.5.2 1 .4 1.4.7l2.3-1.4 2.2 3.8-2 1.7c0 .3.1.7.1 1.1s0 .8-.1 1.1l2 1.7-2.2 3.8-2.3-1.4c-.4.3-.9.5-1.4.7l-.6 2.6H9.8l-.6-2.6c-.5-.2-1-.4-1.4-.7l-2.3 1.4-2.2-3.8 2-1.7c0-.3-.1-.7-.1-1.1s0-.8.1-1.1l-2-1.7 2.2-3.8 2.3 1.4c.4-.3.9-.5 1.4-.7l.6-2.6Z" stroke="currentColor" stroke-width="1.45" stroke-linejoin="round"/>
+                <circle cx="12" cy="12" r="2.8" stroke="currentColor" stroke-width="1.45"/>
+              </svg>
+            </div>
+            <h3>Impianti meccanici</h3>
+            <p>Sistemi tecnici progettati per comfort, efficienza e affidabilità.</p>
+            <span class="renix-card-arrow" aria-hidden="true">→</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="renix-why-section" id="renix-why">
+      <div class="renix-why-container">
+        <header class="renix-section-heading renix-section-heading--left">
+          <h2>Perché scegliere RENIX</h2>
+          <span></span>
+        </header>
+
+        <div class="renix-why-grid">
+          <article class="renix-why-item">
+            <div class="renix-why-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="7.2" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M12 2.8v3M21.2 12h-3M12 21.2v-3M2.8 12h3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Progettazione su misura</h3>
+            <p>Ogni impianto nasce da uno studio accurato delle tue esigenze.</p>
+          </article>
+
+          <article class="renix-why-item">
+            <div class="renix-why-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 2.8 14.2 5l3.1-.2.8 3 2.6 1.7-1.4 2.8.6 3.1-2.8 1.3-1.3 2.8-3.1-.6-2.8 1.4-1.7-2.6-3-.8.2-3.1L3.2 12l2.2-2.2-.2-3.1 3-.8L9.9 3.3l2.1 1.5Z" stroke="currentColor" stroke-width="1.45" stroke-linejoin="round"/>
+                <path d="m8.7 12.2 2.2 2.2 4.5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Qualità certificata</h3>
+            <p>Materiali affidabili e installazioni conformi alle normative.</p>
+          </article>
+
+          <article class="renix-why-item">
+            <div class="renix-why-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M5.2 13.2a6.8 6.8 0 0 1 13.6 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M5.2 13.2v3.2a2 2 0 0 0 2 2h1.1v-5.2H5.2ZM18.8 13.2v3.2a2 2 0 0 1-2 2h-1.1v-5.2h3.1Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                <path d="M15.7 18.4c-.7 1.3-1.9 2-3.7 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Assistenza completa</h3>
+            <p>Ti seguiamo dalla progettazione fino alla manutenzione.</p>
+          </article>
+
+          <article class="renix-why-item">
+            <div class="renix-why-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="7" cy="12" r="3.2" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="17" cy="7" r="3.2" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="17" cy="17" r="3.2" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M9.8 10.6 14.2 8.4M9.8 13.4l4.4 2.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Un unico partner</h3>
+            <p>Fotovoltaico, impianti e riqualificazione energetica con un solo referente.</p>
+          </article>
+        </div>
+      </div>
     </section>
   </main>
 
@@ -111,5 +235,10 @@
   </footer>
 
   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="./script.js"></script>
+
+  <!-- Sezione render-driven: GSAP + ScrollTrigger (vendorizzati) -->
+  <script src="./assets/vendor/gsap/gsap.min.js"></script>
+  <script src="./assets/vendor/gsap/ScrollTrigger.min.js"></script>
+  <script type="module" src="./servizi.js"></script>
 </body>
 </html>

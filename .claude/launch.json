@@ -1,0 +1,19 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "renix-static",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "5599"],
+      "port": 5599,
+      "autoPort": false
+    },
+    {
+      "name": "renix-range",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["tools/range_server.py", "5599"],
+      "port": 5599,
+      "autoPort": false
+    }
+  ]
+}
