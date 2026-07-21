@@ -322,3 +322,17 @@
     max-width: none;
   }
 }
+
+/* =========================================
+   VIDEO NASCOSTO SU TABLET E MOBILE
+========================================= */
+
+@media (max-width: 980px) {
+  .renixvid {
+    display: none !important;
+  }
+
+  .renix-services-section {
+    padding-top: 70px;
+  }
+}

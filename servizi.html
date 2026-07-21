@@ -16,18 +16,48 @@
 
 <body>
   <header class="site-header">
-  <div class="header-inner">
-    <a class="brand" href="./index.html" aria-label="Torna alla homepage">
-      <img src="./assets/logo-renix.svg" alt="Renix" class="brand-logo">
-    </a>
+    <div class="header-inner">
 
-    <nav class="main-nav">
-      <a href="./index.html">Home</a>
-      <a href="./servizi.html" class="is-active" aria-current="page">Servizi</a>
-      <a href="./work-in-progress.html">News</a>
-      <a href="./work-in-progress.html">Contatti</a>
-    </nav>
-  </div>
+      <a class="brand" href="./index.html" aria-label="Torna alla homepage">
+        <img
+          src="./assets/logo-renix.svg"
+          alt="Renix"
+          class="brand-logo"
+        >
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Apri il menu"
+        aria-expanded="false"
+        aria-controls="main-navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav
+        class="main-nav"
+        id="main-navigation"
+        aria-label="Navigazione principale"
+      >
+        <a href="./index.html">Home</a>
+
+        <a
+          href="./servizi.html"
+          class="is-active"
+          aria-current="page"
+        >
+          Servizi
+        </a>
+
+        <a href="./work-in-progress.html">News</a>
+        <a href="./work-in-progress.html">Contatti</a>
+      </nav>
+
+    </div>
   </header>
 
   <main>
