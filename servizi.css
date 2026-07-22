@@ -336,3 +336,218 @@
     padding-top: 70px;
   }
 }
+
+/* =========================================================
+   ANIMAZIONE TEMPORANEAMENTE NASCOSTA
+   Il codice rimane disponibile per essere riattivato.
+========================================================= */
+
+.renixvid {
+  display: none !important;
+}
+
+/* =========================================================
+   BLOCCO INTRODUTTIVO PAGINA SERVIZI
+========================================================= */
+/* =========================================================
+   ANIMAZIONE TEMPORANEAMENTE NASCOSTA
+========================================================= */
+
+.renixvid {
+  display: none !important;
+}
+
+/* =========================================================
+   HERO STATICA PAGINA SERVIZI
+========================================================= */
+
+.services-intro {
+  position: relative;
+  width: 100%;
+  min-height: 700px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+  background: #344244;
+  color: #ffffff;
+}
+
+.services-intro__background {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Sfumatura per rendere leggibili i testi */
+
+.services-intro__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(20, 30, 31, 0.84) 0%,
+      rgba(20, 30, 31, 0.64) 38%,
+      rgba(20, 30, 31, 0.28) 68%,
+      rgba(20, 30, 31, 0.08) 100%
+    );
+}
+
+.services-intro__container {
+  position: relative;
+  z-index: 2;
+
+  width: min(100% - 160px, 1280px);
+  margin: 0 auto;
+  padding: 90px 0;
+}
+
+.services-intro__copy {
+  width: 100%;
+  max-width: 780px;
+}
+
+.services-intro__copy h1 {
+  max-width: 780px;
+  margin: 0 0 34px;
+
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: clamp(52px, 5vw, 72px);
+  line-height: 1.04;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+
+  color: #ffffff;
+}
+
+.services-intro__copy p {
+  max-width: 760px;
+  margin: 0 0 42px;
+
+  font-family: "Inter", Arial, sans-serif;
+  font-size: clamp(20px, 2vw, 27px);
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: #ffffff;
+}
+
+.services-intro__button {
+  min-width: 280px;
+  min-height: 62px;
+  padding: 0 28px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 6px;
+  background: #d8efd0;
+  color: #4c5b5c;
+
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 500;
+  text-align: center;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.services-intro__button:hover {
+  background: #e5f6df;
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 980px) {
+  .services-intro {
+    min-height: 650px;
+  }
+
+  .services-intro__container {
+    width: calc(100% - 44px);
+    padding: 80px 0;
+  }
+
+  .services-intro__copy {
+    max-width: 680px;
+  }
+
+  .services-intro__copy h1 {
+    font-size: clamp(44px, 7vw, 60px);
+  }
+
+  .services-intro__overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(20, 30, 31, 0.88) 0%,
+        rgba(20, 30, 31, 0.65) 58%,
+        rgba(20, 30, 31, 0.25) 100%
+      );
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 680px) {
+  .services-intro {
+    min-height: 640px;
+    align-items: flex-end;
+  }
+
+  .services-intro__background {
+    object-position: 56% center;
+  }
+
+  .services-intro__overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(20, 30, 31, 0.24) 0%,
+        rgba(20, 30, 31, 0.5) 38%,
+        rgba(20, 30, 31, 0.9) 100%
+      );
+  }
+
+  .services-intro__container {
+    width: calc(100% - 36px);
+    padding: 90px 0 54px;
+  }
+
+  .services-intro__copy h1 {
+    margin-bottom: 22px;
+    font-size: clamp(36px, 10vw, 48px);
+    line-height: 1.06;
+  }
+
+  .services-intro__copy p {
+    margin-bottom: 30px;
+    font-size: 17px;
+    line-height: 1.5;
+  }
+
+  .services-intro__button {
+    width: 100%;
+    min-width: 0;
+    min-height: 56px;
+    padding: 14px 18px;
+  }
+}
